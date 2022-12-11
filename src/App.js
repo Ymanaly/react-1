@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React from 'react';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello world!</h1>
+      <input></input>
     </div>
   );
 }
 
-export default App;
+class BuyList extends React.Component {
+  render() {
+    return (
+      <div className="shopping-list">
+        <h1>Shopping List for{this.props.name}</h1>
+        <ul>
+          <li>Tik-Tok</li>
+          <li>Telegram</li>
+          <li>VK</li>
+        </ul>
+      </div>
+    );
+  }
+}
+
+export default BuyList;
